@@ -1,0 +1,103 @@
+/* overview.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EFE2FA;
+}
+
+.header {
+    background-color: #7164B4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.overview-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.overview-section h2 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.overview-section p {
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.features {
+    margin: 30px 0;
+}
+
+.features h3 {
+    color:  black;
+    margin-bottom: 10px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    color: #555;
+    margin: 10px 0;
+}
+
+.get-started {
+    margin: 30px 0;
+}
+
+.get-started h3 {
+    color:  black;
+}
+
+.get-started .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color:  #7164B4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.get-started .btn:hover {
+    background-color:  #8F9FE4;
+}
+
+.footer {
+    background-color: #9f7ace;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
