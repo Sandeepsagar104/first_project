@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam Dashboard</title>
+    <link rel="stylesheet" href="dashbord.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Exam Dashboard</h2>
+        <ul>
+            <li><a href="Overview.html">Overview</a></li>
+            <li><a href="Start_Exam.html">Exams</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <li><a href="Log-Out.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Welcome, User!</h1>
+            <p>Manage and monitor your exams here.</p>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="overview">
+            <div class="card">
+                <h3>Total Exams</h3>
+                <p id="totalExams">5</p>
+            </div>
+            <div class="card">
+                <h3>Students Enrolled</h3>
+                <p id="totalStudents">120</p>
+            </div>
+            <div class="card">
+                <h3>Pending Results</h3>
+                <p id="pendingResults">3</p>
+            </div>
+        </div>
+
+        <!-- Exam List Section -->
+        <div class="exam-list">
+            <h2>Recent Exams</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="examTable">
+                    <!-- JavaScript will populate this section -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
