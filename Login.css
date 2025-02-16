@@ -1,87 +1,116 @@
-*{
+/* Reset & Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-} 
-
-body{
     font-family: Arial, sans-serif;
-     background-color: #EFE2FA;
-    background-size: cover;   
+}
+
+/* Body Styling */
+body {
+    background-color: #EFE2FA;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background-color:plum; */
-    background-position: center; 
 }
 
-.login-container{
-
+/* Login Container */
+.login-container {
     text-align: center;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px black;
-    color:rgb(8, 7, 7);
-    width: 30%;
-    height: 50%;
-    background:white;
-   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    width: 350px;
+    transition: 0.3s ease-in-out;
 }
 
-.login-form{
+.login-container:hover {
+    transform: scale(1.02);
+}
+
+/* Login Form */
+.login-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .login-form h2 {
-    font-size: 2.5em;
-    text-align: center;
+    font-size: 2.2em;
     margin-bottom: 20px;
+    color: #333;
 }
 
-.login-form input{
+/* Input Fields */
+.login-form input {
+    width: 100%;
+    padding: 12px;
     margin-bottom: 15px;
-    padding: 10px;
     font-size: 16px;
-    border: 1px solid #7164BA;
+    border: 2px solid #7164BA;
     border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
 }
 
-.login-form button{
-    padding: 10px;
-    font-size: 20px;
-     background-color:#8F9FE4; 
-    color: black;
+.login-form input:focus {
+    border-color: #8F9FE4;
+    outline: none;
+}
+
+/* Login Button */
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #7164BA;
+    color: white;
     font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.login-form button:hover{
-    background-color:#BCA5D4 ;
-
+.login-form button:hover {
+    background-color: #8F9FE4;
+    transform: scale(1.05);
 }
 
-
-.login-form a,
+/* Create Account Link */
 .login-form a {
     display: block;
-    text-align: left;
-    margin-top: 10px;
+    margin-top: 15px;
     text-decoration: none;
-    color: black;
-    font-size: 17px ;
-} 
+    color: #7164BA;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
-.login-form a:hover 
-{
+.login-form a:hover {
+    color: #8F9FE4;
     text-decoration: underline;
 }
 
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
 
-.login-form a:hover{
-    text-decoration: underline;
-}  
+    .login-form h2 {
+        font-size: 2em;
+    }
+
+    .login-form input {
+        font-size: 15px;
+    }
+
+    .login-form button {
+        font-size: 16px;
+    }
+}

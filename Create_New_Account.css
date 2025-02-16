@@ -1,60 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #EFE2FA;
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #EFE2FA;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+/* Form Container */
 .form-container {
-    background: #BCA5D4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
-}
-
-h1 {
     text-align: center;
-    color: black;
+    transition: 0.3s ease-in-out;
 }
 
+.form-container:hover {
+    transform: scale(1.02);
+}
+
+/* Form Header */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Labels */
 label {
     display: block;
-    margin-bottom: 5px;
-    color: black;
-
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
 }
 
+/* Input Fields */
 input {
-    width: 95%;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #7164B4;
-    border-radius: 4px;
+    border: 2px solid #7164B4;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
 }
 
+/* Input Focus Effect */
+input:focus {
+    border-color: #8F9FE4;
+    outline: none;
+}
+
+/* Submit Button */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #6557aa;
-    color: #fff;
+    padding: 12px;
+    background-color: #7164B4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
+/* Button Hover Effect */
 button:hover {
-    background-color: #3c31a0;
+    background-color: #8F9FE4;
+    transform: scale(1.05);
 }
 
+/* Error Message */
 #errorMessage {
     color: red;
     text-align: center;
     margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
 }

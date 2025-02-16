@@ -1,48 +1,51 @@
-body {
-      font-family: Arial,sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #EFE2FA;
-      color: #070202;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header a {
-    color: #BCA5D4;
-    background-color: transparent;
-    padding: 20px;
-    margin: 20px 0;
-    text-align: left;
+body {
+    background-color: #EFE2FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .home-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #cfbae9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px black;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 500px;
+    width: 100%;
 }
 
-h1 {
+.home-container h1 {
+    font-size: 28px;
+    color: #241e46;
     margin-bottom: 20px;
 }
 
-.start-exam-link {
-    background-color: #7164B4;
-    color: rgb(244, 252, 252);
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 5px;
+.home-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
 }
 
+.start-exam-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #7164B4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
 .start-exam-link:hover {
-    background-color:  #8ea4e4;
-}
-
-
-a {
-    text-align: center;
+    background-color: #241e46;
 }

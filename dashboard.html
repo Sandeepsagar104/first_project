@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Exam Dashboard</title>
-    <link rel="stylesheet" href="dashbord.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <!-- Sidebar -->
@@ -13,9 +13,7 @@
         <ul>
             <li><a href="Overview.html">Overview</a></li>
             <li><a href="Start_Exam.html">Exams</a></li>
-            <li><a href="#">Results</a></li>
-            <li><a href="Settings.html">Settings</a></li>
-            <li><a href="Log-Out.html">Logout</a></li>
+
         </ul>
     </div>
 
@@ -30,7 +28,7 @@
         <!-- Overview Section -->
         <div class="overview">
             <div class="card">
-                <h3>Total Exams</h3>
+                <h3>Total Questions</h3>
                 <p id="totalExams">5</p>
             </div>
             <div class="card">
@@ -43,22 +41,10 @@
             </div>
         </div>
 
-        <!-- Exam List Section -->
-        <div class="exam-list">
-            <h2>Recent Exams</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Exam Name</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="examTable">
-                    <!-- JavaScript will populate this section -->
-                </tbody>
-            </table>
+        <!-- Results Section -->
+        <div class="results">
+            <h2>Your Exam Results</h2>
+            <div id="resultContainer"></div>
         </div>
     </div>
 

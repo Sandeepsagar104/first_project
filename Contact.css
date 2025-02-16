@@ -1,75 +1,117 @@
- 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #EFE2FA;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #7164BA;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+  font-size: 22px;
+}
+
+.home-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.home-link:hover {
+  background-color: #BCA5D4;
+}
+
+/* Contact Section */
+.contact-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  color: #333;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #7164BA;
+  color: white;
+  font-size: 1.1em;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 12px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+a {
+  color: #7164B4;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+      font-size: 14px;
   }
-  
-  header {
-    background-color: #7164BA;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  th, td {
+      padding: 8px;
   }
 
   .header-content h1 {
-    margin: 0;
-    font-size: 20px;
-    text-align: left;
-  } 
-  
- .home-link {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    
+      font-size: 18px;
   }
-  
-  .home-link:hover {
-    text-decoration: underline;
+
+  .home-link {
+      font-size: 14px;
   }
-  
-   /* .contact-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  } */
-   
-  h2 {
-    text-align: center;
-    color: #333;
-    text-decoration: underline;
-  }
-  
-  p {
-    text-align: center;
-    color: black;
-    font-weight: 700;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  thead {
-    background-color: #b08bd8;
-    color: white;
-  }
-  
-  th, td {
-    border: 1px solid black;
-    text-align: left;
-    padding: 10px;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }  
+}
