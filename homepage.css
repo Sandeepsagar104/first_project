@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
     background-color: #EFE2FA;
-    color: black;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Header */
@@ -15,13 +16,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #BCA5DA;
-    padding: 10px;
-    height: 5%;
+    background-color: #7164BA;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
     width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -32,87 +38,94 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(248, 244, 244);
+    color: #fff;
     font-size: 16px;
-    background-color: transparent;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
- a {
-    color: black;
-    background-color: #fff;
-    font-size: 16px;
-} 
 
-.auth-buttons {
+nav ul li a:hover {
+    color: #7164BA;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.auth-button {
     display: flex;
     gap: 10px;
 }
 
- .register-btn, .login-btn {
+.register-btn, .login-btn {
     padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .register-btn {
-    background-color: #7164BA;
-    color: white;
-} 
-
-.login-btn {
-    background-color: #7164BA;
+    background-color: #4CAF50;
     color: white;
 }
 
+.login-btn {
+    background-color: #FF5722;
+    color: white;
+}
+
+.register-btn:hover, .login-btn:hover {
+    transform: translateY(-2px);
+}
 
 /* Hero Section */
 .hero {
-    /* background-image: url('image.avif');
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position:center;
-    */
     text-align: center;
-    color: black;
     padding: 100px 20px;
+    background: linear-gradient(135deg, #7164BA, #BCA5DA);
+    color: white;
 }
 
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .cta-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
-.cta-buttons button {
+.get-started-btn, .learn-more-btn {
     padding: 15px 30px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .get-started-btn {
-    background-color: #7164BA;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
 }
 
 .learn-more-btn {
-    background-color: #7164BA;
-    color: #f2f5f3;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+    background-color: #FF5722;
+    color: white;
+}
+
+.get-started-btn:hover, .learn-more-btn:hover {
+    transform: translateY(-2px);
 }
 
 /* Info Cards */
@@ -121,21 +134,130 @@ nav ul li a {
     justify-content: space-around;
     margin-top: 50px;
     padding: 50px 20px;
-    background-color: #7164BA;
-    color: rgb(235, 224, 224);
+    background-color: #fff;
+    color: #333;
 }
 
 .card {
     width: 30%;
     text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: #7164BA;
 }
 
 .card p {
     font-size: 16px;
+    color: #666;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info span {
+    font-size: 16px;
     color: white;
+}
+
+#logout-btn {
+    padding: 8px 16px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #e64a19;
+}
+
+/* User Details and Logout Button */
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .auth-button {
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
