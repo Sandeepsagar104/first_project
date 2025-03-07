@@ -22,7 +22,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         showMessage('Login successful! Redirecting...', 'green');
         localStorage.setItem("user", JSON.stringify(user));
         setTimeout(() => {
-            window.location.href = 'Dashboard.html'; // Redirect to dashboard or home page
+            window.location.href = 'dashboard.html'; // Redirect to dashboard or home page
         }, 1000);
     } else {
         // Login failed

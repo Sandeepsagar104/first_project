@@ -63,5 +63,5 @@ function saveUserData(user) {
     // Clear the form
     document.getElementById('createAccountForm').reset();
 
-    window.location.href = '/dashboard.html';
+    window.location.href = 'dashboard.html';
 }
